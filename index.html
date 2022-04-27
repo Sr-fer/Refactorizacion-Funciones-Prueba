@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reloj Multitarea</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style\style.css"/>
+
+<body>
+  <div id="grid">
+    <div id="cambio">
+      <button id="activar_reloj">Reloj</button>
+      <br>
+      <br>
+      <button id="activar_cronometro">Cronómetro</button>
+      <br>
+      <br>
+      <button id="activar_temporizador">Temporizador</button>
+      <br>
+      <br>
+    </div>
+    <div id="funciones">
+      <div id="reloj" hidden>
+        <p>Reloj</p>
+        <p id="clockText">00:00:00</p>
+      </div>
+      <div id="cronometro" hidden>
+        <p>Cronómetro</p>
+        <p id="chronoText">00:00:00</p>
+        <ul id="partialTemps"></ul>
+        <button id="startChrono">Start</button>
+        <button id="flagChrono" disabled>Flag</button>
+      </div>
+      <div id="temporizador" hidden>
+        <p>Temporizador</p>
+        <p id="timerText">00:00:00</p>
+        <select id="timerHours"></select>
+        <select id="timerMinutes"></select>
+        <select id="timerSeconds"></select>
+        <br>
+        <br>
+        <button id="startTimer">Start</button>
+        <button id="pauseTimer" disabled>Pause</button>
+        <button id="stopTimer" disabled>Stop</button>
+        <button id="restartTimer" disabled>Restart</button>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+  <script src="scripts\preload.js"></script>
+  <script src="scripts\viewer.js"></script>
+  <script src="scripts\chrono.js"></script>
+  <script src="scripts\timer.js"></script>
+  <script src="scripts\clock.js"></script>
+  <script src="scripts\main.js"></script>
+</footer>
+
+</html>

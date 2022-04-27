@@ -1,0 +1,17 @@
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+#cambio {
+  margin-top: 10%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#funciones {
+  grid-column: 2;
+  grid-row: 1;
+}
