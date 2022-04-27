@@ -55,10 +55,12 @@ function __main__() {
   var Chrono1 = new Chrono(0, 0, 0, 0, document.getElementById("chronoText"), document.getElementById("startChrono"), document.getElementById("flagChrono"))
   var Timer1 = new Timer()
   var Viewer1 = new Viewer()
+  var Model1 = new Model()
   Clock1.StartClock()
   Clock1.NewClockInterval() 
   Chrono1.ChronoEvent()
   Timer1.TimerEvent(Viewer1)
+  Model1.addTimer()
 
 
   //Vamos a utilizar el objeto "window" para establecer las variables de los intervalos y temporizadores de forma global
