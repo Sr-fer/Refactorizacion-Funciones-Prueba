@@ -1,12 +1,14 @@
 class Model {
     constructor() {
+        this.timer = []
+    }
 
-    this.timer = [
-        new Timer("Timer1")
-    ]
-}
-addTimer(Model) {
-    this.timer.push(new Timer(Model))
-}
-}
+    addTimer(id) {
+        this.timer.push(new Timer(id))
+    }
+
+    getTimer(id){
+        return this.timer.find(_timer => _timer.id === id)
+    }
+}   
 

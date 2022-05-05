@@ -45,6 +45,18 @@ function botones() {
   //evento_crono(start_crono, flag_crono)
   //evento_temporizador(start_temp, stop_temp, restart_temp, pause_temp)
 }
+class Controller {
+
+  constructor(id, view) {
+      this.id = id
+      this.view = view
+      this.id.addTimer("Timer1")
+  }
+
+  TimerEvent(id, view) {
+      this.id.getTimer(id).TimerEvent(view)
+  }
+}
 
 
 function __main__() {
@@ -53,14 +65,12 @@ function __main__() {
   botones();
   var Clock1 = new Clock(document.getElementById("clockText"), new Date())
   var Chrono1 = new Chrono(0, 0, 0, 0, document.getElementById("chronoText"), document.getElementById("startChrono"), document.getElementById("flagChrono"))
-  var Timer1 = new Timer()
-  var Viewer1 = new Viewer()
-  var Model1 = new Model()
+  var app = new Controller(new Model, new Viewer)
   Clock1.StartClock()
-  Clock1.NewClockInterval() 
+  Clock1.NewClockInterval()   
   Chrono1.ChronoEvent()
-  Timer1.TimerEvent(Viewer1)
-  Model1.addTimer()
+  app.TimerEvent()
+
 
 
   //Vamos a utilizar el objeto "window" para establecer las variables de los intervalos y temporizadores de forma global
