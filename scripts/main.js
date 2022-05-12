@@ -60,11 +60,23 @@ class Controller {
         Clock1.NewClockInterval()   
         Chrono1.ChronoEvent()
         this.model.addTimer("Timer1")
-        //var Timer1 = this.model.getTimer("Timer1")
-        //this.model.startEvent(Timer1, 1, 5, 7)
-        //this.model.stopEvent(Timer1)
-        //this.model.restartEvent(Timer1, 1, 5, 7)
-        //this.model.pauseEvent(Timer1)
+        var myTimer = this.model.getTimer("Timer1")
+        
+        view.start.addEventListener("click", () =>{
+        model.startEvent(myTimer, view.hourSelectTimer, view.minutesSelectTimer, view.secondesSelectTimer)
+        })
+
+        view.start.addEventListener("click", () =>{
+          model.stopEvent(myTimer)
+        })
+
+        view.start.addEventListener("click", () =>{
+          model.restartEvent(myTimer, view.hourSelectTimer, view.minutesSelectTimer, view.secondesSelectTimer)
+        })
+
+        view.start.addEventListener("click", () =>{
+          model.resumeEvent(myTimer)
+        })
   }
 }
 

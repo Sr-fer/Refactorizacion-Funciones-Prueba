@@ -2,6 +2,7 @@ class Model {
 
     constructor() {
         this.timer = []
+
     }
 
     addTimer(id) {
@@ -17,8 +18,8 @@ class Model {
         auxTimer.timerMinutes =  minutesSelectTimer
         auxTimer.timerSeconds =  secondesSelectTimer
         const TIME = ((auxTimer.timerHours * 3600 + auxTimer.timerMinutes * 60 + auxTimer.timerSeconds) * 1000)
-           //timerText.innerHTML = auxTimer.timerHours + ":" + auxTimer.timerMinutes + ":" + auxTimer.timerSeconds;
-           auxTimer.NewTimer(TIME)
+        auxTimer.NewTimer(TIME)
+        //auxTimer.timerText.innerHTML = auxTimer.timerHours + ":" + auxTimer.timerMinutes + ":" + auxTimer.timerSeconds;
            //auxTimer.pause.disabled = false
            //auxTimer.stop.disabled = false
            //auxTimer.restart.disabled = false
@@ -39,7 +40,7 @@ class Model {
         auxTimer.timerMinutes =  minutesSelectTimer
         auxTimer.timerSeconds =  secondesSelectTimer
            const TIME = ((auxTimer.timerHours * 3600 + auxTimer.timerMinutes * 60 + auxTimer.timerSeconds) * 1000)
-           //timerText.innerHTML = auxTimer.timerHours + ":" + auxTimer.timerMinutes + ":" + auxTimer.timerSeconds;
+           //auxTimer.timerText.innerHTML = auxTimer.timerHours + ":" + auxTimer.timerMinutes + ":" + auxTimer.timerSeconds;
            auxTimer.NewTimer(TIME)
     }
 
@@ -51,18 +52,8 @@ class Model {
         //else {
             //auxTimer.pause.innerHTML = 'Pause'
           const TIME = ((auxTimer.timerHours * 3600 + auxTimer.timerMinutes * 60 + auxTimer.timerSeconds) * 1000)
-          //timerText.innerHTML = auxTimer.timerHours + ":" + auxTimer.timerMinutes + ":" + auxTimer.timerSeconds;
+          //auxTimer.timerText.innerHTML = auxTimer.timerHours + ":" + auxTimer.timerMinutes + ":" + auxTimer.timerSeconds;
           auxTimer.NewTimer(TIME)
         }
-
-    /*ButtonTimerReset(auxTimer, hourSelectTimer, minutesSelectTimer, secondesSelectTimer) {
-        auxTimer.pause.disabled = true
-        auxTimer.stop.disabled = true
-        auxTimer.restart.disabled = true
-        auxTimer.start.disabled = false
-        hourSelectTimer.value = ZERO
-        minutesSelectTimer.value = ZERO
-        secondesSelectTimer.value = ZERO
-   }*/
 }   
 

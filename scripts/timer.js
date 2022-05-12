@@ -33,7 +33,6 @@ else if (Timer.timerSeconds == 0 && Timer.timerMinutes == 0 && Timer.timerHours 
 if (Timer.timerSeconds == 0 && Timer.timerMinutes == 0 && Timer.timerHours == 0) {
   alert('¡SE ACABÓ EL TIEMPO!')
   Timer.StopTimer()
-  //Timer.ButtonTimerReset()
 }
   this.timerText.innerHTML = Timer.timerHours + ":" + Timer.timerMinutes + ":" + Timer.timerSeconds;
 }
